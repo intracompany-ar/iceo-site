@@ -27,7 +27,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="{{ asset('/storage/img/logos/iceov2_196x196.png') }}" alt="" width="30" height="30" class="d-inline-block align-text-top">
-                    ICEO
+                    IceO
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,9 +82,9 @@
                     <br>
                     <br>
                     <br>
-                    <h1 style="font-size: calc(5rem + 1.5vw); color: rgb(61,61,61)">ICEO</h1>
+                    <h1 style="font-size: calc(5rem + 1.5vw); color: rgb(61,61,61)">IceO</h1>
                     <br>
-                    <h1>ERP a tu medida</h1>
+                    <h1>Con este ERP</h1>
                     <h1>Gestionar tu empresa va a ser un juego de niños</h1>
                     <br>
                     <br>
