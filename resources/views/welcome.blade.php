@@ -84,8 +84,8 @@
                     <br>
                     <h1 style="font-size: calc(5rem + 1.5vw); color: rgb(61,61,61)">IceO</h1>
                     <br>
-                    <h1>Con este ERP</h1>
                     <h1>Gestionar tu empresa va a ser un juego de niños</h1>
+                    <h1>ERP 4.0</h1>
                     <br>
                     <br>
                     <br>
