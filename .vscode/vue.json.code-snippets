@@ -1,0 +1,152 @@
+{
+	"useFetchDatatable": {
+		"prefix": "useFetchDatatable",
+		"body": [
+			"import { useFetchDatatable  } from '../../../commons';",
+
+			"const {dataTableRows, setRowsDatatable} = useFetchDatatable();",
+
+			"const $1 = computed(() =>  { return dataTableRows.value  })",
+
+			"function getRows($2){",
+				"\tsetRowsDatatable( $3 );",
+			"}"
+		],
+	},
+
+	"router": {
+		"prefix": "router",
+		"body": [
+			"function router(name, params){ return route(name,params)};",
+		],
+	},
+
+	"computed": {
+		"prefix": "computed",
+		"body": [
+			"import {computed} from 'vue'\n",
+			"const $1 = computed(() =>  {",
+				"\t$2",
+			"})\n",
+		],
+	},
+
+	"watch": {
+		"prefix": "watch",
+		"body": [
+			"import {watch} from 'vue'\n",
+			"watch($1, async() =>  {",
+				"\t$2",
+			"})\n",
+		],
+	},
+
+	"templatevue3": {
+		"prefix": "templatevue3",
+		"body": [
+			"<script setup>",
+				"\timport {ref, watch} from 'vue'\n",
+
+				"\twatch(data, async() =>  {})\n",
+            
+			"</script>\n",
+
+			"<template>\n\t<div>\n",
+
+			"\t</div>",
+            "</template>",
+		],
+		"description": "Prueba1"
+	},
+
+
+	"templatevue2": {
+		"prefix": "templatevue2",
+		"body": [
+			"<template>\n\t<div>\n",
+
+			"\t</div>",
+            "</template>\n",
+
+			"<script>\n",
+
+            "\texport default {\n",
+
+                "\t\tname: '$1',\n",
+
+            "\t}",
+			"</script>\n",
+				
+		],
+		"description": "Prueba1"
+	},
+
+
+	"indexDatatable": {
+		"prefix": "indexDatatable",
+		"body": [
+
+			"<template>\n",
+				"\t<div class=\"container-fluid\">\n",
+				
+					"\t\t<div class=\"row\">",
+						"\t\t\t<div class=\"col-12 text-end\">",
+								"\t\t\t\t<button-search v-on:click=\"getRows\"></button-search>",
+						"\t\t\t</div>",
+					"\t\t</div>\n",
+
+					"\t\t<div class=\"row\">",
+					
+						"\t\t\t<div class=\"col-12\">",
+
+							"\t\t\t\t<table-standard id=\"$1\" v-bind:heads=\"[$2]\">",
+
+								"\t\t\t\t\t<tr v-for=\"row in $4\">",
+
+									"\t\t\t\t\t\t<td></td>",
+
+								"\t\t\t\t\t</tr>",
+
+							"\t\t\t\t</table-standard>",
+						"\t\t\t</div>\n",
+
+					"\t\t</div>",
+				"\t</div>",
+            "</template>\n",
+
+			"<script>\n",
+
+			"\timport TableStandard from '../layouts/TableStandard.vue';",
+			"\timport ButtonSearch from '../forms/buttons/ButtonSearch.vue';\n",
+
+            "\texport default {\n",
+
+                "\t\tname: '$3',\n",
+
+				"\t\tprops: ['urlGet'],\n",
+	
+				"\t\tmixins: [dataTableMixin],\n",
+	
+				"\t\tcomputed:{ $4(){ return this.dataTableRows; } },\n",
+
+				"\t\tcomponents:{",
+					"\t\t\t'table-standard': TableStandard ,",
+					"\t\t\t'button-search': ButtonSearch ,",
+				"\t\t},\n",
+
+				"\t\tmethods:{\n",
+
+					"\t\t\tgetRows(){",
+					
+					"\t\t\t\tthis.setRowsDatatable(this.urlGet, {}, '$1');",
+					
+					"\t\t\t}\n",
+
+				"\t\t},\n",
+
+            "\t}",
+			"</script>\n",
+		],
+		"description": "Prueba1"
+	}
+}

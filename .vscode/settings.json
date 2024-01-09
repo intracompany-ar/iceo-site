@@ -1,0 +1,13 @@
+{
+    "search.exclude": {
+        "**/node_modules": true
+    },
+    "files.exclude": {
+        "**/.git": false
+    },
+    "editor":{
+        "tabSize": 4,
+        "wordWrap": true
+    },
+    "editor.wordWrap": "on",
+}
