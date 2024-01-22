@@ -3,8 +3,6 @@ const srcDir = '.'
 /** @type {import('tailwindcss').Config} */
 export default {
 
-	prefix: 'tw-',
-
 	theme: {
 		extend: {
 			colors: {

@@ -12,6 +12,7 @@
 	"devDependencies": {
 		"@nuxtjs/tailwindcss": "^6.11.0",
 		"commons_front": "^1.0.36",
+		"jquery": "^3.7.1",
 		"nuxt": "^3.8.2",
 		"postcss-import": "^16.0.0",
 		"vue": "^3.4.6",
