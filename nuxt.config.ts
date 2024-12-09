@@ -1,15 +1,35 @@
+import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 
+	build: {
+		transpile: ['vuetify'],
+	},
 
 	devtools: { enabled: false },
 
 	css: [
 		'~/assets/css/main.css',
-		'~/node_modules/commons_front/src/css/_corporate_colors.css',
 	],
 
-	modules: [ '@nuxtjs/tailwindcss' ],
+	vite: {
+		vue: {
+			template: {
+				transformAssetUrls,
+			},
+		},
+	},
+
+	modules: [ 
+		'@nuxtjs/tailwindcss',
+		(_options, nuxt) => {
+			nuxt.hooks.hook('vite:extendConfig', (config) => {
+			  // @ts-expect-error
+			config.plugins.push(vuetify({ autoImport: true }))
+		})
+		},
+	],
 
 	tailwindcss: {},
 
@@ -22,6 +42,7 @@ export default defineNuxtConfig({
 		public: {
 			appBase: process.env.APP_URL,
 			apiBase: process.env.API_URL,
+			appId: process.env.APP_ID
 		}
 	}
 
