@@ -8,9 +8,9 @@
 			<div class="mt-8">
 				<h1 class="text-8xl">Ice<span class="font-bold">O</span></h1>
 				<h2 class="text-4xl">
-					El sistema que será 
-					<div class="font-black text-iceobluearg"> tu mano derecha</div>
-					para gestionar tu empresa
+					Con este sistema, 
+					<div class="font-black text-iceobluearg">gestionar tu empresa</div>
+					vas a ser con jugar videojuegos.
 				</h2>
 			</div>
 			<div>
