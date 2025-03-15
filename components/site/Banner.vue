@@ -10,7 +10,7 @@
 				<h2 class="text-4xl">
 					Con este sistema, 
 					<div class="font-black text-iceobluearg">gestionar tu empresa</div>
-					vas a ser como jugar videojuegos.
+					va a ser como jugar videojuegos.
 				</h2>
 			</div>
 			<div>
