@@ -8,10 +8,14 @@
 			<div class="mt-8">
 				<h1 class="text-8xl">Ice<span class="font-bold">O</span></h1>
 				<h2 class="text-4xl">
-					Con este sistema, 
-					<div class="font-black text-iceobluearg">gestionar tu empresa</div>
-					va a ser como jugar videojuegos.
+					Ponele
+					<div class="font-black text-iceobluearg">nitro</div>
+					a tu empresa.
 				</h2>
+				<p class="text-xl mt-4">
+					IceO se acopla a los sistemas que ya usás —tu ERP, tus planillas, tus
+					integraciones— y los potencia con más de 70 módulos y agentes de IA.
+				</p>
 			</div>
 			<div>
 				<img src="~/assets/img/logos/IceSoloV3.png" alt="IceO Logo" class="mx-auto" width="500rem" height="500rem">
