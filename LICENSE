@@ -1,21 +1,37 @@
-MIT License
+Copyright (c) 2023-2026 Intra Company SAS. Todos los derechos reservados.
 
-Copyright (c) 2023 Alejandro Palarich
+SOFTWARE PROPIETARIO Y CONFIDENCIAL
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Este repositorio y todo su contenido (código fuente, documentación, esquemas
+de datos, configuraciones, diseños y demás materiales, en adelante "el
+Software") son propiedad exclusiva de Intra Company SAS y están protegidos por
+la Ley 11.723 de Propiedad Intelectual de la República Argentina, sus
+modificatorias y los tratados internacionales aplicables.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+No se otorga ninguna licencia, expresa ni implícita, sobre el Software. Sin
+autorización previa y por escrito de Intra Company SAS queda prohibido:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+  1. copiar, reproducir, modificar, adaptar o crear obras derivadas del
+     Software;
+  2. distribuirlo, publicarlo, sublicenciarlo, venderlo, alquilarlo o ponerlo
+     a disposición de terceros por cualquier medio;
+  3. usarlo para fines distintos de los autorizados por Intra Company SAS;
+  4. divulgar su contenido, que constituye información confidencial y secreto
+     comercial de Intra Company SAS.
+
+El acceso al Software, por cualquier vía, no implica cesión ni transferencia
+de derechos de ningún tipo. El uso no autorizado dará lugar a las acciones
+civiles y penales que correspondan.
+
+MARCAS
+
+"Intra Company" es una marca registrada de Intra Company SAS (2026). Este
+aviso no concede ningún derecho de uso sobre las marcas, nombres comerciales,
+logotipos ni signos distintivos de Intra Company SAS.
+
+COMPONENTES DE TERCEROS
+
+Las dependencias y componentes de terceros incluidos o referenciados por el
+Software se rigen por sus respectivas licencias y pertenecen a sus titulares.
+
+EL SOFTWARE SE PROVEE "TAL CUAL", SIN GARANTÍAS DE NINGÚN TIPO.

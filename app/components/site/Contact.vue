@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 // import $ from 'jquery'
-// import { useStoreAdvices } from 'commons_front'
 // const storeAdvices = useStoreAdvices()
 const config = useRuntimeConfig()
 

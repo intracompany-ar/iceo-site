@@ -1,13 +1,13 @@
 # Política de Privacidad de Mia — Asistente de IceO
 
-**Última actualización:** 14 de septiembre de 2026  
-**Versión:** 2.0
+**Última actualización:** 12 de octubre de 2026  
+**Versión:** 2.1
 
 Esta política explica cómo se tratan los datos personales al utilizar **Mia**, el asistente conversacional de IceO disponible mediante WhatsApp, Telegram u otros canales habilitados (el **“Asistente”**). Complementa la Política de Privacidad general de IceO y prevalece respecto del Asistente en caso de contradicción.
 
 ## 1. Responsable y contacto
 
-El responsable de los tratamientos propios necesarios para operar el Asistente es **Alejandro Palarich**, titular y licenciante de IceO ERP, con domicilio en Av. Libertad 798, San Gregorio, Santa Fe, República Argentina. Contacto para privacidad y ejercicio de derechos: **info@iceo.ar**.
+El responsable de los tratamientos propios necesarios para operar el Asistente es **Intra Company SAS**, titular y licenciante de IceO ERP, con domicilio en Av. Libertad 798, San Gregorio, Santa Fe, República Argentina. Contacto para privacidad y ejercicio de derechos: **info@iceo.ar**.
 
 Cuando una empresa o profesional cliente de IceO utilice el Asistente para atender a sus usuarios, ese cliente podrá ser responsable de los datos y decidir las finalidades del tratamiento. IceO actuará como encargado siguiendo sus instrucciones, sin perjuicio de los tratamientos propios necesarios para seguridad, soporte, auditoría técnica y cumplimiento legal. La identidad del cliente responsable deberá estar disponible en el canal que ofrece el Asistente y también puede consultarse a info@iceo.ar.
 
@@ -93,11 +93,9 @@ Algunos proveedores pueden procesar datos fuera de Argentina. Cuando el destino 
 Conservaremos los datos sólo mientras resulten necesarios. Salvo obligación legal, reclamo pendiente o una configuración más breve del cliente:
 
 - **Audios originales:** el archivo de audio se elimina dentro de las 72 horas posteriores a su transcripción o al cierre del intento de procesamiento. **La transcripción en texto no se elimina junto con el archivo:** se conserva como parte del historial durante el plazo indicado para conversaciones, transcripciones y resúmenes.
-- Imágenes y documentos: hasta 30 días, salvo incorporación solicitada a una gestión o registro de IceO.
-- Eventos originales de webhooks: hasta 7 días, salvo investigación de errores o incidentes.
-- Conversaciones, transcripciones y resúmenes: hasta 12 meses desde la última interacción.
-- Registros técnicos y de seguridad: hasta 12 meses.
-- Copias de seguridad: hasta 30 días adicionales según su rotación.
+- Imágenes, documentos, conversaciones, transcripciones y resúmenes: mientras la cuenta o la relación con el cliente responsable esté activa, o hasta que se solicite su eliminación.
+- Eventos originales de webhooks y registros técnicos y de seguridad: durante el tiempo necesario para operar el servicio, investigar errores o incidentes y auditar su funcionamiento.
+- Copias de seguridad: hasta su sobrescritura en el ciclo habitual de rotación.
 
 Después se eliminarán, anonimizarán o bloquearán cuando exista un deber válido de conservación. Una solicitud de supresión comprende, según corresponda, mensajes, adjuntos, transcripciones, resúmenes y registros vinculados. Los datos borrados de sistemas activos podrán permanecer temporalmente en respaldos hasta su rotación, sin utilizarse para otros fines.
 
@@ -132,7 +130,7 @@ Podremos actualizar esta política por cambios legales, tecnológicos o funciona
 
 ## 18. Contacto
 
-**Alejandro Palarich — IceO ERP**  
+**Intra Company SAS — IceO ERP**  
 Av. Libertad 798, San Gregorio, Santa Fe, República Argentina  
 **info@iceo.ar**  
 https://iceo.com.ar

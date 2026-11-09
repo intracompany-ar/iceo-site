@@ -57,7 +57,7 @@ const goToForm = () => {
             </v-btn>
             <v-col class="text-center mt-4" cols="12">
                 {{ new Date().getFullYear() }} — <strong>Iceo</strong>
-                <small>- Desarrollado por Intra Company SA</small>
+                <small>- Desarrollado por Intra Company SAS</small>
             </v-col>
         </v-row>
     </v-footer>
