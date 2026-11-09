@@ -13,8 +13,7 @@
 					a tu empresa.
 				</h2>
 				<p class="text-xl mt-4">
-					IceO se acopla a los sistemas que ya usás —tu ERP, tus planillas, tus
-					integraciones— y los potencia con más de 70 módulos y agentes de IA.
+					IceO se acopla a los sistemas que ya usás y los potencia con más de 70 módulos y agentes de IA.
 				</p>
 			</div>
 			<div>

@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-// import $ from 'jquery'
 // const storeAdvices = useStoreAdvices()
 const config = useRuntimeConfig()
 
