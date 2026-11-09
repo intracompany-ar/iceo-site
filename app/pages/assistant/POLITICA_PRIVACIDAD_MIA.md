@@ -128,11 +128,11 @@ Las bases alcanzadas deberán inscribirse en el Registro Nacional de Bases de Da
 
 ## 17. Cambios
 
-Podremos actualizar esta política por cambios legales, tecnológicos o funcionales. Publicaremos la versión vigente y sus modificaciones relevantes en https://iceo.ar/assistant/politica. Cuando un cambio requiera nuevo consentimiento, se solicitará antes del nuevo tratamiento.
+Podremos actualizar esta política por cambios legales, tecnológicos o funcionales. Publicaremos la versión vigente y sus modificaciones relevantes en https://iceo.com.ar/assistant/politica. Cuando un cambio requiera nuevo consentimiento, se solicitará antes del nuevo tratamiento.
 
 ## 18. Contacto
 
 **Alejandro Palarich — IceO ERP**  
 Av. Libertad 798, San Gregorio, Santa Fe, República Argentina  
 **info@iceo.ar**  
-https://iceo.ar
+https://iceo.com.ar
