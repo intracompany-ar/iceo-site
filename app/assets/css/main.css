@@ -1,2 +1,5 @@
 @import './_corporate_colors.css';
 
+html {
+	scroll-behavior: smooth;
+}

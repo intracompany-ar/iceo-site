@@ -5,6 +5,10 @@ export default {
 
 	theme: {
 		extend: {
+			// Misma tipografía que tenía Vuetify (Roboto con fallback del sistema)
+			fontFamily: {
+				sans: ['Roboto', 'sans-serif'],
+			},
 			colors: {
 				'iceoblue': 'var(--Iceo-space-cadet)',
 				'iceogray': 'var(--Iceo-french-gray)',

@@ -6,6 +6,13 @@ definePageMeta({
     layout: 'blank'
 })
 
+useSeoMeta({
+    title: 'Política de Privacidad de Mia | IceO',
+    description: 'Política de privacidad de Mia, la asistente de IA de IceO: qué datos usa, para qué y cómo se protegen.',
+    ogTitle: 'Política de Privacidad de Mia | IceO',
+    ogDescription: 'Política de privacidad de Mia, la asistente de IA de IceO: qué datos usa, para qué y cómo se protegen.',
+})
+
 const renderedPolicy = marked.parse(privacyPolicy, { async: false })
 </script>
 

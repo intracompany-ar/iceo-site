@@ -3,6 +3,13 @@ definePageMeta({
     layout: 'blank'
 })
 
+useSeoMeta({
+    title: 'Términos de Servicio | IceO',
+    description: 'Condiciones de acceso y uso de la plataforma IceO ERP en modalidad SaaS: licencia, propiedad intelectual, soporte, seguridad, pagos y rescisión.',
+    ogTitle: 'Términos de Servicio | IceO',
+    ogDescription: 'Condiciones de acceso y uso de la plataforma IceO ERP en modalidad SaaS: licencia, propiedad intelectual, soporte, seguridad, pagos y rescisión.',
+})
+
 const lastUpdate = '2025-12-02'
 </script>
 

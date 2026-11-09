@@ -1,64 +1,82 @@
-<script setup ts>
+<script setup lang="ts">
 definePageMeta({
     layout: 'blank'
 })
 
-const links = ref([
-    'Home',
-    // 'Nosotros',
-    // 'Intra Company SA',
-    // 'Características',
-    // 'Contacto',
-])
+const { public: { siteUrl } } = useRuntimeConfig()
 
-const goToForm = () => {
-    const element = document.getElementById('form-contact');
-    if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-    }
-}
+const links = [
+    { label: 'Home', to: '/' },
+    { label: 'Privacidad', to: '/privacidad' },
+    { label: 'Términos', to: '/terminos' },
+]
+
+// Datos estructurados para buscadores (schema.org)
+useHead({
+    script: [{
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@graph': [
+                {
+                    '@type': 'Organization',
+                    '@id': `${siteUrl}/#organization`,
+                    name: 'IceO',
+                    url: `${siteUrl}/`,
+                    logo: `${siteUrl}/og-image.png`,
+                    parentOrganization: { '@type': 'Organization', name: 'Intra Company SAS' },
+                },
+                {
+                    '@type': 'WebSite',
+                    '@id': `${siteUrl}/#website`,
+                    name: 'IceO',
+                    url: `${siteUrl}/`,
+                    inLanguage: 'es-AR',
+                    publisher: { '@id': `${siteUrl}/#organization` },
+                },
+            ],
+        }),
+    }],
+})
 </script>
 
 <template>
-    <v-app-bar class="p-2">
-        <template v-slot:prepend>
-            <NuxtLink to="/" class="no-underline flex items-center">
-                <img src="~/assets/img/logos/iceov2_196x196.png" alt="" width="30" height="30">
+    <header class="fixed inset-x-0 top-0 z-50 flex h-20 items-start bg-[#fffbfe] py-2 pl-2">
+        <div class="flex h-16 w-full items-center justify-between">
+            <NuxtLink to="/" class="ml-1 flex items-center" aria-label="IceO, ir al inicio">
+                <img src="~/assets/img/logos/iceo-logo-64.webp" alt="" width="30" height="30">
                 <span class="ml-2">IceO</span>
             </NuxtLink>
-        </template>
 
-        <v-btn v-on:click.prevent="goToForm">
-            CONTACTANOS
-        </v-btn>
-    </v-app-bar>
+            <a href="#form-contact"
+                class="mr-1 inline-flex h-9 min-w-16 items-center rounded-3xl px-4 text-sm font-medium uppercase tracking-[1.25px] transition-colors hover:bg-black/[.04] focus-visible:bg-black/[.12] focus-visible:outline-none">
+                Contactanos
+            </a>
+        </div>
+    </header>
 
-    <v-main>
+    <main class="pt-16">
         <SiteBanner />
 
         <SiteExplicacion />
 
         <SiteContact />
-        <!-- <NuxtWelcome /> -->
-    </v-main>
+    </main>
 
-        
-    <v-footer class="bg-grey-lighten-1">
-        <v-row justify="center" no-gutters>
-            <v-btn
+    <footer class="bg-[#bdbdbd] px-4 py-2">
+        <nav class="flex flex-wrap justify-center" aria-label="Pie de página">
+            <NuxtLink
                 v-for="link in links"
-                :key="link"
-                class="mx-2"
-                color="white"
-                rounded="xl"
-                variant="text"
+                :key="link.to"
+                :to="link.to"
+                class="mx-2 inline-flex h-9 min-w-16 items-center justify-center rounded-3xl px-4 text-[11.2px] font-medium uppercase tracking-[1.25px] text-white transition-colors hover:bg-white/[.08] focus-visible:bg-white/[.16] focus-visible:outline-none"
             >
-                <small>{{ link }}</small>
-            </v-btn>
-            <v-col class="text-center mt-4" cols="12">
-                {{ new Date().getFullYear() }} — <strong>Iceo</strong>
-                <small>- Desarrollado por Intra Company SAS</small>
-            </v-col>
-        </v-row>
-    </v-footer>
+                {{ link.label }}
+            </NuxtLink>
+        </nav>
+        <p class="mt-4 text-center">
+            {{ new Date().getFullYear() }} — <strong>Iceo</strong>
+            <small>- Desarrollado por Intra Company SAS</small>
+        </p>
+    </footer>
 </template>

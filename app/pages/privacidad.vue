@@ -3,6 +3,13 @@ definePageMeta({
     layout: 'blank'
 })
 
+useSeoMeta({
+    title: 'Política de Privacidad | IceO',
+    description: 'Cómo IceO ERP recolecta, usa, protege y conserva los datos personales, conforme a la Ley 25.326 de Protección de Datos Personales.',
+    ogTitle: 'Política de Privacidad | IceO',
+    ogDescription: 'Cómo IceO ERP recolecta, usa, protege y conserva los datos personales, conforme a la Ley 25.326 de Protección de Datos Personales.',
+})
+
 const lastUpdate = '2025-12-02'
 </script>
 

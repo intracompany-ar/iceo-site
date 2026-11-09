@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iceo.com.ar/sitemap.xml
