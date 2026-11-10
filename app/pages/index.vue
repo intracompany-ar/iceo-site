@@ -2,7 +2,7 @@
 definePageMeta({ layout: 'blank' })
 const { public: { siteUrl } } = useRuntimeConfig()
 const links = [{ label: 'Inicio', to: '#inicio' }, { label: 'Cómo funciona', to: '#como-funciona' }]
-useHead({ script: [{ type: 'application/ld+json', innerHTML: JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'Organization', '@id': `${siteUrl}/#organization`, name: 'IceO', url: `${siteUrl}/`, logo: `${siteUrl}/og-image.png`, parentOrganization: { '@type': 'Organization', name: 'Intra Company SAS' } }, { '@type': 'WebSite', '@id': `${siteUrl}/#website`, name: 'IceO', url: `${siteUrl}/`, inLanguage: 'es-AR', publisher: { '@id': `${siteUrl}/#organization` } }] }) }] })
+useHead({ script: [{ type: 'application/ld+json', innerHTML: JSON.stringify({ '@context': 'https://schema.org', '@graph': [{ '@type': 'Organization', '@id': `${siteUrl}/#organization`, name: 'IceO', url: `${siteUrl}/`, logo: { '@type': 'ImageObject', url: `${siteUrl}/iceo-logo.png`, width: 1254, height: 1254 }, parentOrganization: { '@type': 'Organization', name: 'Intra Company SAS' } }, { '@type': 'WebSite', '@id': `${siteUrl}/#website`, name: 'IceO', url: `${siteUrl}/`, inLanguage: 'es-AR', publisher: { '@id': `${siteUrl}/#organization` } }] }) }] })
 </script>
 
 <template>

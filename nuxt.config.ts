@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const siteUrl = 'https://iceo.com.ar'
-const siteTitle = 'IceO — Ponele nitro a tu empresa'
-const siteDescription = 'IceO se acopla a los sistemas que ya usás y los potencia con más de 70 módulos y agentes de IA: información, tableros, automatizaciones y configuraciones para tu empresa.'
+const siteTitle = 'IceO | Software e IA para potenciar tu empresa'
+const siteDescription = 'IceO conecta los sistemas que ya usás y los potencia con más de 70 módulos y agentes de IA para automatizar procesos, ordenar datos y tomar mejores decisiones.'
 
 export default defineNuxtConfig({
 	devtools: { enabled: false },
@@ -25,7 +25,12 @@ export default defineNuxtConfig({
 				{ property: 'og:image', content: `${siteUrl}/og-image.png` },
 				{ property: 'og:image:width', content: '1200' },
 				{ property: 'og:image:height', content: '630' },
+				{ property: 'og:image:alt', content: 'IceO — Software e inteligencia artificial para empresas' },
 				{ name: 'twitter:card', content: 'summary_large_image' },
+				{ name: 'twitter:title', content: siteTitle },
+				{ name: 'twitter:description', content: siteDescription },
+				{ name: 'twitter:image', content: `${siteUrl}/og-image.png` },
+				{ name: 'twitter:image:alt', content: 'IceO — Software e inteligencia artificial para empresas' },
 			],
 			link: [
 				{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
