@@ -1,117 +1,42 @@
 <script lang="ts" setup>
 const config = useRuntimeConfig()
-
-const formData = ref({
-	name: '',
-	last_name: '',
-	company: '',
-	email: '',
-	phone_number: '',
-	content: '',
-	country: 'AR',
-	application_id: config.public.appId,
-});
-
+const status = ref<'idle' | 'sending' | 'success' | 'error'>('idle')
+const formData = ref({ name: '', last_name: '', company: '', email: '', phone_number: '', content: '', country: 'AR', application_id: config.public.appId })
 async function store() {
-	try {
-		const data = await $fetch(config.public.apiBase+'/api/ticket/public', {
-			method: 'POST',
-			body: formData.value,
-		});
-		console.log('Datos obtenidos:', data);
-	} catch (error) {
-		console.error('Error al obtener los datos:', error);
-	}
-	// storeAdvices.success('Consulta enviada con éxito');
+    status.value = 'sending'
+    try {
+        await $fetch(config.public.apiBase + '/api/ticket/public', { method: 'POST', body: formData.value })
+        status.value = 'success'
+    } catch { status.value = 'error' }
 }
 </script>
-
 <template>
-	<section class="bg-iceoblue" id="form-contact" aria-labelledby="contact-title">
-		<div class="isolate px-6 py-24 sm:py-32 lg:px-8">
-			<div class="mx-auto max-w-2xl text-center">
-				<h2 id="contact-title" class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Contactanos</h2>
-			</div>
-			<form v-on:submit.prevent="store" method="POST" class="mx-auto mt-16 max-w-xl">
-				<div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-					<div>
-						<label for="first-name" class="block text-sm font-semibold leading-6 text-white">Nombre</label>
-						<div class="mt-2.5">
-							<input type="text" name="first-name" id="first-name" autocomplete="given-name"
-								class="block w-full rounded-md border-0 bg-transparent px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-								required v-model="formData.name">
-						</div>
-					</div>
-					<div>
-						<label for="last-name" class="block text-sm font-semibold leading-6 text-white">Apellido</label>
-						<div class="mt-2.5">
-							<input type="text" name="last-name" id="last-name" autocomplete="family-name"
-								class="block w-full rounded-md border-0 bg-transparent px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" v-model="formData.last_name">
-						</div>
-					</div>
-					<div class="sm:col-span-2">
-						<label for="company" class="block text-sm font-semibold leading-6 text-white">Empresa</label>
-						<div class="mt-2.5">
-							<input type="text" name="company" id="company" autocomplete="organization"
-								class="block w-full rounded-md border-0 bg-transparent px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" v-model="formData.company">
-						</div>
-					</div>
-					<div class="sm:col-span-2">
-						<label for="email" class="block text-sm font-semibold leading-6 text-white">Email</label>
-						<div class="mt-2.5">
-							<input type="email" name="email" id="email" autocomplete="email"
-								class="block w-full rounded-md border-0 bg-transparent px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-								required v-model="formData.email">
-						</div>
-					</div>
-					<div class="sm:col-span-2">
-						<label for="phone-number" class="block text-sm font-semibold leading-6 text-white">Teléfono</label>
-						<div class="relative mt-2.5">
-							<div class="absolute inset-y-0 left-0 flex items-center">
-								<label for="country" class="sr-only">País</label>
-								<select id="country" name="country" v-model="formData.country"
-									class="h-full rounded-md border-0 bg-transparent bg-none appearance-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
-									<option>AR</option>
-								</select>
-								<!-- <svg class="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400"
-									viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-									<path fill-rule="evenodd"
-										d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-										clip-rule="evenodd"></path>
-								</svg> -->
-							</div>
-							<input type="tel" name="phone-number" id="phone-number" autocomplete="tel"
-								class="block w-full rounded-md border-0 bg-transparent px-3.5 py-2 pl-20 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" v-model="formData.phone_number">
-						</div>
-					</div>
-					<div class="sm:col-span-2">
-						<label for="message" class="block text-sm font-semibold leading-6 text-white">Mensaje</label>
-						<div class="mt-2.5">
-							<textarea name="message" id="message" rows="4"
-								class="block w-full rounded-md border-0 bg-transparent px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" required v-model="formData.content"></textarea>
-						</div>
-					</div>
-					<div class="flex gap-x-4 sm:col-span-2">
-						<!-- <div class="flex h-6 items-center">
-							<button type="button"
-								class="bg-gray-200 flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-white/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-								role="switch" aria-checked="false" aria-labelledby="switch-1-label">
-								<span class="sr-only">Agree to policies</span>
-								<span aria-hidden="true"
-									class="translate-x-0 h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-white/5 transition duration-200 ease-in-out"></span>
-							</button>
-						</div> -->
-						<!-- <label class=" text-sm leading-6 text-white" id="switch-1-label">
-							Enviando este formulario estás aceptando nuestra
-							<a href="#" class="font-semibold text-indigo-600">política de privacidad</a>.
-						</label> -->
-					</div>
-				</div>
-				
-				<div class="mt-10">
-					<button type="submit" class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Enviar</button>
-				</div>
-			</form>
-		</div>
-	</section>
+    <section id="form-contact" class="contact-section" aria-labelledby="contact-title">
+        <div class="contact-orb contact-orb-one" aria-hidden="true"></div><div class="contact-orb contact-orb-two" aria-hidden="true"></div>
+        <div class="site-container contact-grid">
+            <div class="contact-copy">
+                <span class="section-kicker section-kicker-light">El próximo paso</span>
+                <h2 id="contact-title">Hagamos que tu empresa <strong>vuele.</strong></h2>
+                <p>Contanos dónde sentís que la operación te está frenando. Te mostramos cómo IceO puede integrarse a tu realidad.</p>
+                <div class="contact-note"><span>01</span><p>Nos contás sobre tu empresa</p></div>
+                <div class="contact-note"><span>02</span><p>Detectamos oportunidades concretas</p></div>
+                <div class="contact-note"><span>03</span><p>Diseñamos un camino para avanzar</p></div>
+            </div>
+            <form class="contact-form" @submit.prevent="store">
+                <div class="form-heading"><span>Empecemos</span><span class="form-arrow" aria-hidden="true">↗</span></div>
+                <div class="form-grid">
+                    <label><span>Nombre *</span><input v-model="formData.name" type="text" autocomplete="given-name" placeholder="Tu nombre" required></label>
+                    <label><span>Apellido</span><input v-model="formData.last_name" type="text" autocomplete="family-name" placeholder="Tu apellido"></label>
+                    <label class="form-full"><span>Empresa</span><input v-model="formData.company" type="text" autocomplete="organization" placeholder="¿Dónde trabajás?"></label>
+                    <label class="form-full"><span>Email *</span><input v-model="formData.email" type="email" autocomplete="email" placeholder="nombre@empresa.com" required></label>
+                    <label class="form-full"><span>Teléfono</span><div class="phone-field"><span>AR</span><input v-model="formData.phone_number" type="tel" autocomplete="tel" placeholder="11 1234 5678"></div></label>
+                    <label class="form-full"><span>¿Qué te gustaría mejorar? *</span><textarea v-model="formData.content" rows="3" placeholder="Contanos un poco sobre tu desafío..." required></textarea></label>
+                </div>
+                <button type="submit" class="button button-primary form-submit" :disabled="status === 'sending'">{{ status === 'sending' ? 'Enviando...' : 'Enviar consulta' }} <span aria-hidden="true">→</span></button>
+                <p v-if="status === 'success'" class="form-status success" role="status">¡Gracias! Recibimos tu consulta y nos vamos a poner en contacto.</p>
+                <p v-if="status === 'error'" class="form-status error" role="alert">No pudimos enviar la consulta. Por favor, intentá nuevamente.</p>
+                <p class="form-privacy">Al enviar aceptás nuestra <NuxtLink to="/privacidad">política de privacidad</NuxtLink>.</p>
+            </form>
+        </div>
+    </section>
 </template>
